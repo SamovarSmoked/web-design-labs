@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore curated AI topics, research streams, and verified primary sources on PulseAI." />
+  <title data-i18n="meta.topics_title">PulseAI &mdash; Topics &amp; Sources Directory | AI News Aggregator</title>
+</head>
+<body class="page page--topics">
+  <%- include('../partials/header', { activePage: 'topics' }) %>
+
+  <main class="page-main" id="main-content">
+    <section class="page-hero" aria-labelledby="topics-page-heading">
+      <p class="page-hero__badge" data-i18n="topics_page.badge">Taxonomy &middot; 6 Core Domains</p>
+      <h1 class="page-hero__title" id="topics-page-heading" data-i18n="topics_page.title">Explore AI Topics &amp; Indexed Research Sources</h1>
+      <p class="page-hero__subtitle" data-i18n="topics_page.subtitle">
+        Subscribe to specialized technical streams across foundation models, robotics, silicon photonics, and safety governance.
+      </p>
+    </section>
+
+    <section class="topics-catalog" aria-labelledby="catalog-heading">
+      <h2 class="topics-catalog__title" id="catalog-heading" data-i18n="topics_page.catalog_heading">Curated Domain Streams</h2>
+      <div class="topics-catalog__grid">
+        <article class="topic-card" data-topic-id="llms">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-01</span>
+            <span class="topic-card__growth" data-i18n="topics.llms.growth">+24% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.llms.name">LLMs & Autonomous Agents</h3>
+          <p class="topic-card__description" data-i18n="topics.llms.desc">Foundation models, sparse attention, reasoning chains, and multi-agent tool use.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.llms.stats">142 articles &middot; 18 sources</span>
+            <button
+              class="topic-card__follow-btn topic-card__follow-btn--following"
+              type="button"
+              aria-label="Unfollow topic LLMs & Autonomous Agents"
+              aria-pressed="true"
+              data-i18n="topic.following"
+            >Following</button>
+          </footer>
+        </article>
+
+        <article class="topic-card" data-topic-id="robotics">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-02</span>
+            <span class="topic-card__growth" data-i18n="topics.robotics.growth">+19% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.robotics.name">Robotics & Edge AI</h3>
+          <p class="topic-card__description" data-i18n="topics.robotics.desc">Visuomotor policies, embodied intelligence, embedded NPUs, and sim-to-real transfer.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.robotics.stats">86 articles &middot; 12 sources</span>
+            <button
+              class="topic-card__follow-btn topic-card__follow-btn--following"
+              type="button"
+              aria-label="Unfollow topic Robotics & Edge AI"
+              aria-pressed="true"
+              data-i18n="topic.following"
+            >Following</button>
+          </footer>
+        </article>
+
+        <article class="topic-card" data-topic-id="hardware">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-03</span>
+            <span class="topic-card__growth" data-i18n="topics.hardware.growth">+31% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.hardware.name">AI Hardware & Photonics</h3>
+          <p class="topic-card__description" data-i18n="topics.hardware.desc">Wafer-scale accelerators, HBM4 memory architectures, optical interconnects, and custom ASICs.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.hardware.stats">64 articles &middot; 9 sources</span>
+            <button
+              class="topic-card__follow-btn topic-card__follow-btn--following"
+              type="button"
+              aria-label="Unfollow topic AI Hardware & Photonics"
+              aria-pressed="true"
+              data-i18n="topic.following"
+            >Following</button>
+          </footer>
+        </article>
+
+        <article class="topic-card" data-topic-id="vision">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-04</span>
+            <span class="topic-card__growth" data-i18n="topics.vision.growth">+15% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.vision.name">Computer Vision & 3D</h3>
+          <p class="topic-card__description" data-i18n="topics.vision.desc">4D Gaussian splatting, multimodal video understanding, and spatial computing.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.vision.stats">98 articles &middot; 14 sources</span>
+            <button
+              class="topic-card__follow-btn "
+              type="button"
+              aria-label="Follow topic Computer Vision & 3D"
+              aria-pressed="false"
+              data-i18n="topic.follow"
+            >Follow Topic</button>
+          </footer>
+        </article>
+
+        <article class="topic-card" data-topic-id="safety">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-05</span>
+            <span class="topic-card__growth" data-i18n="topics.safety.growth">+12% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.safety.name">AI Safety, Alignment & Policy</h3>
+          <p class="topic-card__description" data-i18n="topics.safety.desc">Mechanistic interpretability, automated red-teaming, governance, and formal verification.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.safety.stats">53 articles &middot; 11 sources</span>
+            <button
+              class="topic-card__follow-btn "
+              type="button"
+              aria-label="Follow topic AI Safety, Alignment & Policy"
+              aria-pressed="false"
+              data-i18n="topic.follow"
+            >Follow Topic</button>
+          </footer>
+        </article>
+
+        <article class="topic-card" data-topic-id="opensource">
+          <header class="topic-card__header">
+            <span class="topic-card__code" aria-hidden="true">AI-06</span>
+            <span class="topic-card__growth" data-i18n="topics.opensource.growth">+28% this week</span>
+          </header>
+          <h3 class="topic-card__title" data-i18n="topics.opensource.name">Open-Weight Ecosystems</h3>
+          <p class="topic-card__description" data-i18n="topics.opensource.desc">Quantization kernels (GGUF/AWQ), local inference servers, and community fine-tuning datasets.</p>
+          <footer class="topic-card__footer">
+            <span class="topic-card__stats" data-i18n="topics.opensource.stats">119 articles &middot; 16 sources</span>
+            <button
+              class="topic-card__follow-btn "
+              type="button"
+              aria-label="Follow topic Open-Weight Ecosystems"
+              aria-pressed="false"
+              data-i18n="topic.follow"
+            >Follow Topic</button>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <section class="sources-directory" aria-labelledby="sources-table-heading">
+      <h2 class="sources-directory__title" id="sources-table-heading" data-i18n="sources.heading">Verified Primary Research Sources</h2>
+      <p class="sources-directory__desc" data-i18n="sources.description">Direct ingestion pipelines with cryptographic provenance and citation verification.</p>
+
+      <table class="sources-table" aria-label="Verified Primary AI Sources Directory">
+        <caption class="sources-table__caption" data-i18n="sources.table_caption">Indexed AI journals, preprint servers, and hardware labs</caption>
+        <thead class="sources-table__head">
+          <tr class="sources-table__row">
+            <th class="sources-table__cell sources-table__cell--head" scope="col" data-i18n="sources.col_name">Source Name</th>
+            <th class="sources-table__cell sources-table__cell--head" scope="col" data-i18n="sources.col_domain">Primary Domain</th>
+            <th class="sources-table__cell sources-table__cell--head" scope="col" data-i18n="sources.col_freq">Weekly Volume</th>
+            <th class="sources-table__cell sources-table__cell--head" scope="col" data-i18n="sources.col_trust">Verification Index</th>
+          </tr>
+        </thead>
+        <tbody class="sources-table__body">
+          <tr class="sources-table__row">
+            <td class="sources-table__cell"><strong>ArXiv CS.AI / CS.LG Daily</strong></td>
+            <td class="sources-table__cell">LLMs &amp; Foundation Models</td>
+            <td class="sources-table__cell">48 papers / week</td>
+            <td class="sources-table__cell">99.4% Verified</td>
+          </tr>
+          <tr class="sources-table__row">
+            <td class="sources-table__cell"><strong>SemiAnalysis Silicon Weekly</strong></td>
+            <td class="sources-table__cell">AI Hardware &amp; Photonics</td>
+            <td class="sources-table__cell">12 reports / week</td>
+            <td class="sources-table__cell">98.2% Verified</td>
+          </tr>
+          <tr class="sources-table__row">
+            <td class="sources-table__cell"><strong>IEEE Spectrum Robotics</strong></td>
+            <td class="sources-table__cell">Robotics &amp; Edge AI</td>
+            <td class="sources-table__cell">22 articles / week</td>
+            <td class="sources-table__cell">99.1% Verified</td>
+          </tr>
+          <tr class="sources-table__row">
+            <td class="sources-table__cell"><strong>HuggingFace Open Benchmarks</strong></td>
+            <td class="sources-table__cell">Open-Weight Ecosystems</td>
+            <td class="sources-table__cell">31 evaluations / week</td>
+            <td class="sources-table__cell">97.8% Verified</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="propose-source" aria-labelledby="propose-source-heading">
+      <h2 class="propose-source__title" id="propose-source-heading" data-i18n="sources.propose_heading">Submit a New Research Feed or Lab Source</h2>
+      <form class="propose-source__form" action="./topics.html" method="post" aria-label="Propose a new AI source">
+        <fieldset class="propose-source__fieldset">
+          <legend class="propose-source__legend" data-i18n="sources.form_legend">Source Ingestion Proposal</legend>
+
+          <div class="propose-source__field">
+            <label class="propose-source__label" for="source-title" data-i18n="sources.label_title">Publication or Lab Name:</label>
+            <input class="propose-source__input" id="source-title" type="text" name="sourceName" required placeholder="e.g., Distill.pub Research" aria-label="Publication or Lab Name" data-i18n-placeholder="sources.placeholder_title" />
+          </div>
+
+          <div class="propose-source__field">
+            <label class="propose-source__label" for="source-rss" data-i18n="sources.label_rss">RSS / Atom / JSON Feed URL:</label>
+            <input class="propose-source__input" id="source-rss" type="url" name="feedUrl" required placeholder="https://example.org/feed.xml" aria-label="RSS or Atom Feed URL" data-i18n-placeholder="sources.placeholder_rss" />
+          </div>
+
+          <div class="propose-source__field">
+            <label class="propose-source__label" for="source-category" data-i18n="sources.label_category">Target Topic Stream:</label>
+            <select class="propose-source__select" id="source-category" name="category" aria-label="Target Topic Stream">
+              <option value="llms">LLMs &amp; Autonomous Agents</option>
+              <option value="robotics">Robotics &amp; Edge AI</option>
+              <option value="hardware">AI Hardware &amp; Photonics</option>
+              <option value="vision">Computer Vision &amp; 3D</option>
+              <option value="safety">AI Safety &amp; Policy</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary" type="submit" aria-label="Submit source for verification" data-i18n="sources.submit_btn">Submit Source for Review</button>
+        </fieldset>
+      </form>
+    </aside>
+  </main>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>

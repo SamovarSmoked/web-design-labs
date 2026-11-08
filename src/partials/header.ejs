@@ -1,0 +1,41 @@
+<header class="site-header" role="banner" data-i18n-section="header">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip_to_content">Skip to main content</a>
+  <div class="site-header__container">
+    <a class="site-header__brand" href="./index.html" aria-label="PulseAI Home">
+      <span class="site-header__logo" aria-hidden="true">P</span>
+      <span class="site-header__title" data-i18n="brand.name">PulseAI</span>
+      <span class="site-header__tagline" data-i18n="brand.tagline">AI News &amp; Research Aggregator</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary Navigation" data-i18n-aria="nav.primary_aria">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link <%= activePage === 'home' ? 'site-nav__link--active' : '' %>" href="./index.html" <%- activePage === 'home' ? 'aria-current="page"' : '' %> data-i18n="nav.home">Home (Feed)</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link <%= activePage === 'topics' ? 'site-nav__link--active' : '' %>" href="./topics.html" <%- activePage === 'topics' ? 'aria-current="page"' : '' %> data-i18n="nav.topics">Topics</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link <%= activePage === 'article' ? 'site-nav__link--active' : '' %>" href="./article.html" <%- activePage === 'article' ? 'aria-current="page"' : '' %> data-i18n="nav.article">Article Details</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link <%= activePage === 'bookmarks' ? 'site-nav__link--active' : '' %>" href="./bookmarks.html" <%- activePage === 'bookmarks' ? 'aria-current="page"' : '' %> data-i18n="nav.bookmarks">Bookmarks</a>
+        </li>
+      </ul>
+    </nav>
+
+    <form class="site-header__search" action="./index.html" method="get" role="search" aria-label="Global article search">
+      <label class="visually-hidden" for="header-search-input" data-i18n="search.label">Search AI articles and papers</label>
+      <input
+        class="site-header__search-input"
+        id="header-search-input"
+        type="search"
+        name="q"
+        placeholder="Search AI papers, models..."
+        aria-label="Search AI papers, models, and topics"
+        data-i18n-placeholder="search.placeholder"
+      />
+      <button class="site-header__search-btn" type="submit" aria-label="Submit search" data-i18n="search.button">Search</button>
+    </form>
+  </div>
+</header>
