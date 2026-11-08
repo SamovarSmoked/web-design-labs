@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PulseAI — Curated Artificial Intelligence News, Research Papers, and Benchmark Aggregator." />
+  <title data-i18n="meta.home_title">PulseAI &mdash; Home Feed | AI News Aggregator</title>
+</head>
+<body class="page page--home">
+  <header class="site-header" role="banner" data-i18n-section="header">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip_to_content">Skip to main content</a>
+    <div class="site-header__container">
+      <a class="site-header__brand" href="./index.html" aria-label="PulseAI Home">
+        <span class="site-header__logo" aria-hidden="true">P</span>
+        <span class="site-header__title" data-i18n="brand.name">PulseAI</span>
+        <span class="site-header__tagline" data-i18n="brand.tagline">AI News &amp; Research Aggregator</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary Navigation" data-i18n-aria="nav.primary_aria">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="./index.html" aria-current="page" data-i18n="nav.home">Home (Feed)</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./topics.html" data-i18n="nav.topics">Topics</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./article.html" data-i18n="nav.article">Article Details</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./bookmarks.html" data-i18n="nav.bookmarks">Bookmarks</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="site-header__search" action="./index.html" method="get" role="search" aria-label="Global article search">
+        <label class="visually-hidden" for="header-search-input" data-i18n="search.label">Search AI articles and papers</label>
+        <input
+          class="site-header__search-input"
+          id="header-search-input"
+          type="search"
+          name="q"
+          placeholder="Search AI papers, models..."
+          aria-label="Search AI papers, models, and topics"
+          data-i18n-placeholder="search.placeholder"
+        />
+        <button class="site-header__search-btn" type="submit" aria-label="Submit search" data-i18n="search.button">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="page-main" id="main-content">
+    <section class="hero-section" aria-labelledby="hero-heading" itemscope itemtype="https://schema.org/NewsArticle">
+      <div class="hero-section__content">
+        <p class="hero-section__eyebrow">
+          <span class="hero-section__badge" data-i18n="hero.featured_badge">Featured Research</span>
+          <span class="hero-section__topic" itemprop="articleSection" data-i18n="topics.llms">LLMs &amp; Agents</span>
+        </p>
+        <h1 class="hero-section__title" id="hero-heading" itemprop="headline" data-i18n="articles.art1.title">
+          Sparse Attention Architectures Cut Million-Token Context Latency by 68%
+        </h1>
+        <p class="hero-section__lead" itemprop="description" data-i18n="articles.art1.excerpt">
+          Researchers introduce hierarchical block-sparse routing that dynamically prunes KV-cache memory overhead during long-context autoregressive decoding on H200 and B200 GPU clusters.
+        </p>
+        <p class="hero-section__meta">
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            By <strong itemprop="name">Dr. Elena Vance</strong>
+          </span>
+          <span aria-hidden="true">&middot;</span>
+          <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <span itemprop="name">ArXiv AI Digest</span>
+          </span>
+          <span aria-hidden="true">&middot;</span>
+          <time datetime="2026-11-07" itemprop="datePublished">Nov 07, 2026</time>
+        </p>
+        <div class="hero-section__actions">
+          <a class="btn btn--primary" href="./article.html" aria-label="Read full featured article about Sparse Attention Architectures" data-i18n="hero.cta_read">Read Full Article</a>
+          <a class="btn btn--secondary" href="./bookmarks.html" aria-label="View saved bookmarks" data-i18n="hero.cta_bookmarks">View Saved Bookmarks</a>
+        </div>
+      </div>
+
+      <figure class="hero-section__media">
+        <picture class="hero-section__picture">
+          <source
+            type="image/webp"
+            srcset="./assets/images/hero-neural-480w.webp 480w, ./assets/images/hero-neural-960w.webp 960w"
+            sizes="(max-width: 767px) 100vw, 560px"
+          />
+          <img
+            class="hero-section__image"
+            src="./assets/images/hero-neural-960w.jpg"
+            srcset="./assets/images/hero-neural-480w.jpg 480w, ./assets/images/hero-neural-960w.jpg 960w"
+            sizes="(max-width: 767px) 100vw, 560px"
+            alt="Abstract optical neural network architecture representing sparse attention routing"
+            width="960"
+            height="540"
+            fetchpriority="high"
+            itemprop="image"
+          />
+        </picture>
+        <figcaption class="hero-section__caption" data-i18n="hero.caption">
+          Figure 1: Dynamic Block-Sparse Routing (DBSR) activation topology across 1M-token context windows.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="feed-controls" aria-labelledby="feed-controls-heading">
+      <h2 class="feed-controls__title" id="feed-controls-heading" data-i18n="feed.filter_heading">Filter &amp; Sort AI News Feed</h2>
+      <form class="feed-filter-form" action="./index.html" method="get" aria-label="Filter news feed by topic and sort order">
+        <fieldset class="feed-filter-form__fieldset">
+          <legend class="feed-filter-form__legend" data-i18n="feed.topic_legend">Select AI Domain</legend>
+          <div class="feed-filter-form__group">
+            <label class="feed-filter-form__label" for="topic-select" data-i18n="feed.topic_label">Topic Category:</label>
+            <select class="feed-filter-form__select" id="topic-select" name="topic" aria-label="Filter articles by topic">
+              <option value="all" data-i18n="topics.all">All Topics (6)</option>
+              <option value="llms" data-i18n="topics.llms">LLMs &amp; Autonomous Agents</option>
+              <option value="robotics" data-i18n="topics.robotics">Robotics &amp; Edge AI</option>
+              <option value="hardware" data-i18n="topics.hardware">AI Hardware &amp; Photonics</option>
+              <option value="vision" data-i18n="topics.vision">Computer Vision &amp; 3D</option>
+              <option value="safety" data-i18n="topics.safety">AI Safety &amp; Policy</option>
+            </select>
+          </div>
+
+          <div class="feed-filter-form__group">
+            <label class="feed-filter-form__label" for="sort-select" data-i18n="feed.sort_label">Sort By:</label>
+            <select class="feed-filter-form__select" id="sort-select" name="sort" aria-label="Sort articles">
+              <option value="latest" data-i18n="feed.sort_latest">Latest Published</option>
+              <option value="impact" data-i18n="feed.sort_impact">Highest Citation Impact</option>
+              <option value="readtime" data-i18n="feed.sort_readtime">Shortest Read Time</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary" type="submit" aria-label="Apply feed filters" data-i18n="feed.apply_btn">Apply Filters</button>
+          <button class="btn btn--ghost" type="reset" aria-label="Reset feed filters" data-i18n="feed.reset_btn">Reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <div class="page-main__layout">
+      <section class="news-feed" aria-labelledby="latest-feed-heading">
+        <header class="news-feed__header">
+          <h2 class="news-feed__title" id="latest-feed-heading" data-i18n="feed.latest_heading">Latest Curated AI Articles</h2>
+          <p class="news-feed__subtitle" data-i18n="feed.latest_subtitle">Showing verified preprints, hardware analyses, and engineering reports.</p>
+        </header>
+
+        <div class="news-feed__grid">
+        <article class="news-card news-card--featured" itemscope itemtype="https://schema.org/NewsArticle" data-article-id="art-1">
+          <figure class="news-card__media">
+            <picture class="news-card__picture">
+              <source
+                type="image/webp"
+                srcset="./assets/images/hero-neural-480w.webp 480w, ./assets/images/hero-neural-960w.webp 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+              />
+              <img
+                class="news-card__image"
+                src="./assets/images/hero-neural-480w.jpg"
+                srcset="./assets/images/hero-neural-480w.jpg 480w, ./assets/images/hero-neural-960w.jpg 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+                alt="Abstract optical neural network architecture representing sparse attention routing"
+                width="480"
+                height="320"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
+          </figure>
+
+          <div class="news-card__body">
+            <div class="news-card__meta">
+              <span class="news-card__badge" itemprop="articleSection" data-i18n="topics.llms">LLMs & Agents</span>
+              <span class="news-card__read-time" data-i18n="article.read_time">6 min read</span>
+            </div>
+
+            <h3 class="news-card__title" itemprop="headline">
+              <a class="news-card__title-link" href="./article.html" data-i18n="articles.art1.title">Sparse Attention Architectures Cut Million-Token Context Latency by 68%</a>
+            </h3>
+
+            <p class="news-card__excerpt" itemprop="description" data-i18n="articles.art1.excerpt">
+              Researchers introduce hierarchical block-sparse routing that dynamically prunes KV-cache memory overhead during long-context autoregressive decoding.
+            </p>
+
+            <footer class="news-card__footer">
+              <div class="news-card__source-info">
+                <span class="news-card__source" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <span itemprop="name">ArXiv AI Digest</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <span class="news-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Dr. Elena Vance</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <time class="news-card__date" datetime="2026-11-07" itemprop="datePublished">Nov 07, 2026</time>
+              </div>
+
+              <div class="news-card__actions">
+                <a class="news-card__read-link" href="./article.html" aria-label="Read full article: Sparse Attention Architectures Cut Million-Token Context Latency by 68%" data-i18n="card.read_more">Read article</a>
+                <button
+                  class="news-card__bookmark-btn news-card__bookmark-btn--active"
+                  type="button"
+                  aria-label="Remove from bookmarks: Sparse Attention Architectures Cut Million-Token Context Latency by 68%"
+                  aria-pressed="true"
+                  data-i18n="card.bookmark"
+                >Bookmarked</button>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle" data-article-id="art-2">
+          <figure class="news-card__media">
+            <picture class="news-card__picture">
+              <source
+                type="image/webp"
+                srcset="./assets/images/robotics-arm-480w.webp 480w, ./assets/images/robotics-arm-960w.webp 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+              />
+              <img
+                class="news-card__image"
+                src="./assets/images/robotics-arm-480w.jpg"
+                srcset="./assets/images/robotics-arm-480w.jpg 480w, ./assets/images/robotics-arm-960w.jpg 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+                alt="High-precision industrial robotic arm in an automated research laboratory"
+                width="480"
+                height="320"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
+          </figure>
+
+          <div class="news-card__body">
+            <div class="news-card__meta">
+              <span class="news-card__badge" itemprop="articleSection" data-i18n="topics.robotics">Robotics & Edge</span>
+              <span class="news-card__read-time" data-i18n="article.read_time">5 min read</span>
+            </div>
+
+            <h3 class="news-card__title" itemprop="headline">
+              <a class="news-card__title-link" href="./article.html" data-i18n="articles.art2.title">Closed-Loop Visuomotor Policies Enable Sub-Millimeter Robotic Assembly</a>
+            </h3>
+
+            <p class="news-card__excerpt" itemprop="description" data-i18n="articles.art2.excerpt">
+              End-to-end diffusion policies trained on synthetic physics simulations transfer zero-shot to bimanual industrial manipulators at 120Hz control rates.
+            </p>
+
+            <footer class="news-card__footer">
+              <div class="news-card__source-info">
+                <span class="news-card__source" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <span itemprop="name">IEEE Spectrum AI</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <span class="news-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Marcus Chen</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <time class="news-card__date" datetime="2026-11-06" itemprop="datePublished">Nov 06, 2026</time>
+              </div>
+
+              <div class="news-card__actions">
+                <a class="news-card__read-link" href="./article.html" aria-label="Read full article: Closed-Loop Visuomotor Policies Enable Sub-Millimeter Robotic Assembly" data-i18n="card.read_more">Read article</a>
+                <button
+                  class="news-card__bookmark-btn news-card__bookmark-btn--active"
+                  type="button"
+                  aria-label="Remove from bookmarks: Closed-Loop Visuomotor Policies Enable Sub-Millimeter Robotic Assembly"
+                  aria-pressed="true"
+                  data-i18n="card.bookmark"
+                >Bookmarked</button>
+              </div>
+            </footer>
+          </div>
+        </article>
+
+        <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle" data-article-id="art-3">
+          <figure class="news-card__media">
+            <picture class="news-card__picture">
+              <source
+                type="image/webp"
+                srcset="./assets/images/silicon-wafer-480w.webp 480w, ./assets/images/silicon-wafer-960w.webp 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+              />
+              <img
+                class="news-card__image"
+                src="./assets/images/silicon-wafer-480w.jpg"
+                srcset="./assets/images/silicon-wafer-480w.jpg 480w, ./assets/images/silicon-wafer-960w.jpg 960w"
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 368px"
+                alt="Macro view of a silicon photonic AI processor wafer with optical waveguides"
+                width="480"
+                height="320"
+                loading="lazy"
+                itemprop="image"
+              />
+            </picture>
+          </figure>
+
+          <div class="news-card__body">
+            <div class="news-card__meta">
+              <span class="news-card__badge" itemprop="articleSection" data-i18n="topics.hardware">AI Hardware</span>
+              <span class="news-card__read-time" data-i18n="article.read_time">8 min read</span>
+            </div>
+
+            <h3 class="news-card__title" itemprop="headline">
+              <a class="news-card__title-link" href="./article.html" data-i18n="articles.art3.title">Wafer-Scale Optical Interconnects Break the Memory Wall for Trillion-Parameter Models</a>
+            </h3>
+
+            <p class="news-card__excerpt" itemprop="description" data-i18n="articles.art3.excerpt">
+              Co-packaged silicon photonics deliver 14.4 TB/s chip-to-chip bandwidth at 1.2 picojoules per bit, eliminating copper SERDES bottlenecks.
+            </p>
+
+            <footer class="news-card__footer">
+              <div class="news-card__source-info">
+                <span class="news-card__source" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                  <span itemprop="name">SemiAnalysis Weekly</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <span class="news-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Liam O'Connor</span>
+                </span>
+                <span class="news-card__separator" aria-hidden="true">&middot;</span>
+                <time class="news-card__date" datetime="2026-11-05" itemprop="datePublished">Nov 05, 2026</time>
+              </div>
+
+              <div class="news-card__actions">
+                <a class="news-card__read-link" href="./article.html" aria-label="Read full article: Wafer-Scale Optical Interconnects Break the Memory Wall for Trillion-Parameter Models" data-i18n="card.read_more">Read article</a>
+                <button
+                  class="news-card__bookmark-btn news-card__bookmark-btn--active"
+                  type="button"
+                  aria-label="Remove from bookmarks: Wafer-Scale Optical Interconnects Break the Memory Wall for Trillion-Parameter Models"
+                  aria-pressed="true"
+                  data-i18n="card.bookmark"
+                >Bookmarked</button>
+              </div>
+            </footer>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <aside class="trending-sidebar" aria-labelledby="sidebar-benchmarks-heading">
+        <h2 class="trending-sidebar__title" id="sidebar-benchmarks-heading" data-i18n="sidebar.leaderboard_title">Weekly Model Efficiency Leaderboard</h2>
+        <p class="trending-sidebar__desc" data-i18n="sidebar.leaderboard_desc">Live throughput comparison across open-weight and frontier architectures.</p>
+
+        <table class="leaderboard-table" aria-label="Weekly AI Model Efficiency Leaderboard">
+          <caption class="leaderboard-table__caption" data-i18n="sidebar.table_caption">Inference speed and SWE-Bench score (Nov 2026)</caption>
+          <thead class="leaderboard-table__head">
+            <tr class="leaderboard-table__row">
+              <th class="leaderboard-table__cell leaderboard-table__cell--head" scope="col" data-i18n="table.model">Model</th>
+              <th class="leaderboard-table__cell leaderboard-table__cell--head" scope="col" data-i18n="table.swe_score">SWE-Bench</th>
+              <th class="leaderboard-table__cell leaderboard-table__cell--head" scope="col" data-i18n="table.throughput">Tok/s</th>
+            </tr>
+          </thead>
+          <tbody class="leaderboard-table__body">
+            <tr class="leaderboard-table__row">
+              <td class="leaderboard-table__cell">MoE-Coder-14B-x3</td>
+              <td class="leaderboard-table__cell">84.6%</td>
+              <td class="leaderboard-table__cell">192 t/s</td>
+            </tr>
+            <tr class="leaderboard-table__row">
+              <td class="leaderboard-table__cell">DBSR-Sparse-70B</td>
+              <td class="leaderboard-table__cell">82.1%</td>
+              <td class="leaderboard-table__cell">148 t/s</td>
+            </tr>
+            <tr class="leaderboard-table__row">
+              <td class="leaderboard-table__cell">Vision-Splat-4D</td>
+              <td class="leaderboard-table__cell">79.4%</td>
+              <td class="leaderboard-table__cell">210 t/s</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <section class="newsletter-widget" aria-labelledby="newsletter-heading">
+          <h3 class="newsletter-widget__title" id="newsletter-heading" data-i18n="newsletter.title">Daily AI Engineering Digest</h3>
+          <form class="newsletter-widget__form" action="./index.html" method="post" aria-label="Subscribe to daily AI newsletter">
+            <label class="newsletter-widget__label" for="newsletter-email" data-i18n="newsletter.email_label">Work or University Email:</label>
+            <input
+              class="newsletter-widget__input"
+              id="newsletter-email"
+              type="email"
+              name="email"
+              required
+              placeholder="researcher@kpi.ua"
+              aria-label="Enter email for daily AI digest"
+              data-i18n-placeholder="newsletter.email_placeholder"
+            />
+            <button class="btn btn--primary" type="submit" aria-label="Subscribe to digest" data-i18n="newsletter.submit">Subscribe</button>
+          </form>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" data-i18n-section="footer">
+    <div class="site-footer__container">
+      <div class="site-footer__brand">
+        <p class="site-footer__title">
+          <strong data-i18n="brand.name">PulseAI</strong> &mdash;
+          <span data-i18n="footer.description">Curated Artificial Intelligence Engineering &amp; Research Feed.</span>
+        </p>
+        <p class="site-footer__copyright" data-i18n="footer.copyright">
+          &copy; 2026 PulseAI Aggregator. KPI Web Technologies &amp; Web Design Course (Variant 16 / Theme 6).
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer Navigation" data-i18n-aria="nav.footer_aria">
+        <ul class="site-footer__list">
+          <li class="site-footer__item"><a class="site-footer__link" href="./index.html" data-i18n="nav.home">Home (Feed)</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="./topics.html" data-i18n="nav.topics">Topics</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="./article.html" data-i18n="nav.article">Article Details</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="./bookmarks.html" data-i18n="nav.bookmarks">Bookmarks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
